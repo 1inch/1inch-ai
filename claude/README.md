@@ -1,6 +1,6 @@
 # Claude Connector
 
-The 1inch MCP server is available as a connector in the [Claude Connectors Directory](https://claude.com/connectors/directory).
+The 1inch MCP server is available as a connector in the [Claude Connectors Directory](https://claude.com/connectors).
 
 **Server URL:** `https://api.1inch.com/mcp/protocol`
 
