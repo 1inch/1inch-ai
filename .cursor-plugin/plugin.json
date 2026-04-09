@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Swap, order & query 1inch APIs from your AI assistant. Search docs, get SDK examples, execute swaps, manage limit orders, and call product APIs.",
   "author": {
-    "name": "1inch Network",
+    "name": "1inch",
     "email": "support@1inch.com"
   },
   "logo": "assets/logo.svg",
