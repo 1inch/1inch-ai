@@ -27,7 +27,7 @@ Add to `.cursor/mcp.json` in your project root:
 ```json
 {
   "mcpServers": {
-    "1inch-business": {
+    "1inch-mcp": {
       "url": "https://api.1inch.com/mcp/protocol"
     }
   }
@@ -39,7 +39,7 @@ For authenticated tools, add your API key:
 ```json
 {
   "mcpServers": {
-    "1inch-business": {
+    "1inch-mcp": {
       "url": "https://api.1inch.com/mcp/protocol",
       "headers": {
         "Authorization": "Bearer YOUR_API_KEY"

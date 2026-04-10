@@ -21,7 +21,7 @@ Create `.cursor/mcp.json` in your project:
 ```json
 {
   "mcpServers": {
-    "1inch-business": {
+    "1inch-mcp": {
       "url": "https://api.1inch.com/mcp/protocol"
     }
   }
@@ -31,7 +31,7 @@ Create `.cursor/mcp.json` in your project:
 ### Claude Code
 
 ```bash
-claude mcp add --transport http --scope user 1inch-business https://api.1inch.com/mcp/protocol
+claude mcp add --transport http --scope user 1inch-mcp https://api.1inch.com/mcp/protocol
 ```
 
 ### VS Code (Copilot)
@@ -41,7 +41,7 @@ Create `.vscode/mcp.json` in your project:
 ```json
 {
   "servers": {
-    "1inch-business": {
+    "1inch-mcp": {
       "type": "http",
       "url": "https://api.1inch.com/mcp/protocol"
     }
