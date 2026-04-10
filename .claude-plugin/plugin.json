@@ -1,0 +1,8 @@
+{
+  "name": "1inch-mcp",
+  "description": "Intent & cross-chain swaps, limit orders, portfolio, spot prices, gas & all 1inch APIs. Public tools work without auth; execution tools use OAuth.",
+  "author": {
+    "name": "1inch (Degensoft Ltd.)"
+  },
+  "mcpServers": "./mcp.json"
+}

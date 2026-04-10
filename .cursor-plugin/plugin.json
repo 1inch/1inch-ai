@@ -1,11 +1,14 @@
 {
   "name": "1inch-mcp",
+  "displayName": "1inch MCP",
   "version": "1.0.0",
-  "description": "Swap, order & query 1inch APIs from your AI assistant. Search docs, get SDK examples, execute swaps, manage limit orders, and call product APIs.",
+  "description": "Intent & cross-chain swaps, limit orders, portfolio, spot prices, gas & all 1inch APIs.",
   "author": {
     "name": "1inch (Degensoft Ltd.)",
-    "email": "e.tschimev@degensoft.com"
+    "url": "https://business.1inch.com"
   },
+  "homepage": "https://business.1inch.com/portal/documentation/ai-integration",
+  "license": "MIT",
   "logo": "assets/logo.svg",
   "keywords": [
     "1inch",
@@ -19,5 +22,6 @@
     "ethereum",
     "cross-chain",
     "intent-based"
-  ]
+  ],
+  "mcp": "./mcp.json"
 }

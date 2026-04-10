@@ -1,5 +1,8 @@
 {
-  "1inch-mcp": {
-    "url": "https://api.1inch.com/mcp/protocol"
+  "mcpServers": {
+    "1inch-mcp": {
+      "type": "http",
+      "url": "https://api.1inch.com/mcp/protocol"
+    }
   }
 }

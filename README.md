@@ -66,10 +66,15 @@ The skill lives in [`skills/1inch-mcp-server/`](skills/1inch-mcp-server/SKILL.md
 ## Repository structure
 
 ```
+.cursor-plugin/          Cursor Marketplace plugin manifest
+.claude-plugin/          Claude Code plugin manifest
 skills/                  Agent Skills (agentskills.io)
   1inch-mcp-server/      MCP server skill (SKILL.md + references)
-cursor/                  Cursor marketplace assets
-claude/                  Claude Connectors Directory assets
+cursor/                  Cursor plugin README and docs
+claude/                  Claude Connectors Directory pointer
+assets/                  Logo and branding
+mcp.json                 MCP server configuration (remote URL)
+SECURITY.md              Security policy and vulnerability reporting
 ```
 
 ## Authentication
