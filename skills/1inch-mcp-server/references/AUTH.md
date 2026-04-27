@@ -19,6 +19,8 @@ How you set this depends on the client:
 
 If the user calls an authenticated tool without a key, MCP clients that support OAuth can start a browser login against the 1inch Business Portal. After login, tools work for that session.
 
+Protected tools (including the optional `debug` log lookup) need a **non-anonymous** session: a **Bearer API key** and/or **OAuth** as supported by the gateway, plus (for `debug`) organization context for log scoping. The `debug` tool is only available when the server registers it; see [TOOLS.md](TOOLS.md).
+
 ## Stdio bridging (Claude Desktop and similar)
 
 When the client only supports stdio:
