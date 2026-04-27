@@ -59,6 +59,14 @@ Proxy to 1inch product REST APIs.
 
 Because the tool can perform writes via POST, it is marked **destructive** at the MCP layer even when `method` is GET.
 
+### `debug`
+
+**Optional** — the server only registers this tool when Grafana Loki integration is enabled. It does not appear in `tools/list` otherwise.
+
+Org-scoped production debugging: look up application logs in Loki. Requires the same **authenticated** access as other protected tools (Bearer and/or OAuth per gateway); organization scope comes from the gateway context.
+
+**Modes:** (1) pass `requestId` (e.g. `x-request-id`) with optional `startTime` / `endTime` (defaults: 24h lookback to `endTime` or now). (2) omit `requestId` and pass `startTime` and `endTime` (RFC3339), with optional `logLevel` (`info` | `warn` | `error`) and `limit` (1–100, default 50).
+
 ## Machine-readable API index
 
 For discovering `product_api` paths: `https://business.1inch.com/portal/llms.txt`.

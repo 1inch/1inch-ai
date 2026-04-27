@@ -10,7 +10,7 @@ The 1inch MCP server is hosted at:
 https://api.1inch.com/mcp/protocol
 ```
 
-It provides tools for documentation search, SDK examples, token swaps, limit orders, and authenticated product API access. Full documentation: [1inch MCP Server](https://business.1inch.com/portal/documentation/ai-integration/mcp-server).
+It provides tools for documentation search, SDK examples, token swaps, limit orders, and authenticated product API access. Full documentation: [1inch MCP Server](https://business.1inch.com/portal/documentation/ai-integration/ecosystem).
 
 ## Quick setup
 
@@ -51,7 +51,7 @@ Create `.vscode/mcp.json` in your project:
 
 ### Other clients
 
-See the [full setup guide](https://business.1inch.com/portal/documentation/ai-integration/mcp-server) for Claude Desktop, Windsurf, JetBrains, OpenAI Codex, Gemini CLI, and more.
+See the [full setup guide](https://business.1inch.com/portal/documentation/ai-integration/ecosystem) for Claude Desktop, Windsurf, JetBrains, OpenAI Codex, Gemini CLI, and more.
 
 ## Agent Skills
 
@@ -79,13 +79,13 @@ SECURITY.md              Security policy and vulnerability reporting
 
 ## Authentication
 
-Public tools (`search`, `list_examples`, `get_example`) work without authentication. Execution tools (`swap`, `orderbook`, `product_api`) require an API key or OAuth login.
+Public tools (`search`, `list_examples`, `get_example`) work without authentication. Authenticated tools (`swap`, `orderbook`, `product_api`) require an API key or OAuth login. The optional `debug` tool (organization-scoped log lookup) appears only when the deployment registers it; it uses the same authentication model as other protected tools. See the [MCP product docs](https://business.1inch.com/portal/documentation/ai-integration/ecosystem).
 
 Get an API key from the [1inch Business Portal](https://business.1inch.com/portal).
 
 ## Links
 
-- [Product documentation](https://business.1inch.com/portal/documentation/ai-integration/mcp-server)
+- [Product documentation](https://business.1inch.com/portal/documentation/ai-integration/ecosystem)
 - [Agent Skills specification](https://agentskills.io/specification)
 - [Machine-readable API index](https://business.1inch.com/portal/llms.txt)
 
