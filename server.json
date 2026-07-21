@@ -1,0 +1,24 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.1inch.business/mcp",
+  "title": "1inch MCP",
+  "description": "Doc search, intent & cross-chain swaps, limit orders, portfolio, spot prices, gas & all APIs.",
+  "version": "1.0.0",
+  "websiteUrl": "https://business.1inch.com/portal/documentation/ai-integration",
+  "repository": {
+    "url": "https://github.com/1inch/1inch-ai",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://business.1inch.com/portal/favicon/favicon-128x128.png",
+      "sizes": ["48x48", "64x64", "96x96", "128x128"]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.1inch.com/mcp/protocol"
+    }
+  ]
+}
