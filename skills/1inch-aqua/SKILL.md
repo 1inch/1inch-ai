@@ -1,0 +1,26 @@
+---
+name: 1inch-aqua
+description: >-
+  Read 1inch Aqua shared-liquidity analytics (maker TVL, fees, APY, strategies,
+  activity, volume) via the MCP `aqua` tool. Use for Aqua strategy questions;
+  prefer aqua over raw product_api.
+license: MIT
+compatibility: Requires 1inch MCP server with aqua tool enabled (Unleash mcp-service.tool.aqua).
+---
+
+# Aqua strategy analytics
+
+Prefer the MCP tool **`aqua`** (public reads). Full playbook: `file://1inch-mcp/guides/aqua-workflow`.
+
+## Read actions
+
+- `maker_stats` — TVL, fees, APY for a maker
+- `list_maker_strategies` — strategies for a maker
+- `strategy_overview` / `strategy_activity` / `strategy_volume`
+- `list_opened` — open strategies feed
+
+Write actions (`build_ship`, `build_dock`, `quote`, `build_swap`) only when the server enables them; they are non-custodial (wallet signs).
+
+## Fallback
+
+Raw paths: `/aqua/v1.0/strategies/...` via `product_api` — only if the `aqua` tool is unavailable.

@@ -50,23 +50,35 @@ Typical flow: `build` -> user signs typed data -> `create` with signature.
 
 Proxy to 1inch product REST APIs.
 
-| Parameter | Type              | Required | Notes                                 |
-| --------- | ----------------- | -------- | ------------------------------------- |
-| `method`  | `"GET"` or `"POST"` | No     | Default `GET`                         |
-| `path`    | string            | Yes      | API path (e.g. portfolio, price, gas) |
-| `query`   | object            | No       | Query string map                      |
-| `body`    | object            | No       | JSON body for POST                    |
+| Parameter | Type                | Required | Notes                                 |
+| --------- | ------------------- | -------- | ------------------------------------- |
+| `method`  | `"GET"` or `"POST"` | No       | Default `GET`                         |
+| `path`    | string              | Yes      | API path (e.g. portfolio, price, gas) |
+| `query`   | object              | No       | Query string map                      |
+| `body`    | object              | No       | JSON body for POST                    |
 
 Because the tool can perform writes via POST, it is marked **destructive** at the MCP layer even when `method` is GET.
 
+For exact call recipes (spot price, gas, portfolio, Web3 RPC, etc.), load the domain skills `1inch-market-data`, `1inch-wallet-data`, or `1inch-infrastructure`.
+
 ### `debug`
 
-**Optional** — the server only registers this tool when Grafana Loki integration is enabled. It does not appear in `tools/list` otherwise.
+**Optional** — the server only registers this tool when request-log lookup is enabled for the deployment. It does not appear in `tools/list` otherwise.
 
-Org-scoped production debugging: look up application logs in Loki. Requires the same **authenticated** access as other protected tools (Bearer and/or OAuth per gateway); organization scope comes from the gateway context.
+Org-scoped production debugging: look up application request logs. Requires the same **authenticated** access as other protected tools (Bearer and/or OAuth per gateway); organization scope comes from the gateway context.
 
 **Modes:** (1) pass `requestId` (e.g. `x-request-id`) with optional `startTime` / `endTime` (defaults: 24h lookback to `endTime` or now). (2) omit `requestId` and pass `startTime` and `endTime` (RFC3339), with optional `logLevel` (`info` | `warn` | `error`) and `limit` (1–100, default 50).
 
+## Optional public tools
+
+### `walletconnect`
+
+**Optional** — registered when WalletConnect is configured. Non-custodial pairing (`connect` / `status` / `sign` / `send_transaction` / `disconnect`). See skill `1inch-walletconnect`.
+
+### `aqua`
+
+**Optional** — registered when Unleash flag `mcp-service.tool.aqua` is on. Aqua strategy analytics (and optional write builders). Prefer this over raw `product_api` for Aqua. See skill `1inch-aqua`.
+
 ## Machine-readable API index
 
-For discovering `product_api` paths: `https://business.1inch.com/portal/llms.txt`.
+For discovering `product_api` paths: `https://business.1inch.com/portal/llms.txt`, or MCP resource `file://1inch-mcp/guides/api-index` (gateway path notes grouped by Trading & Liquidity, Wallet & Data, Market Data, Infrastructure).
