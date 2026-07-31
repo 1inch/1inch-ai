@@ -10,7 +10,7 @@ compatibility: Requires 1inch MCP server with aqua tool enabled (Unleash mcp-ser
 
 # Aqua strategy analytics
 
-Prefer the MCP tool **`aqua`** (public reads). Full playbook: `file://1inch-mcp/guides/aqua-workflow`.
+Prefer the MCP tool **`aqua`** (public reads). Full playbook (action examples, priceRange semantics, maker/taker flows, compliance): [references/WORKFLOW.md](references/WORKFLOW.md). Same content is served live as MCP resource `file://1inch-mcp/guides/aqua-workflow` for clients that read resources.
 
 ## Read actions
 

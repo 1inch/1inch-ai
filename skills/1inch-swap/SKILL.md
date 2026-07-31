@@ -24,15 +24,18 @@ Use the authenticated MCP tool **`swap`**. Do not hand-build calldata for normal
 2. **Full flow:** `quoteOnly: true` → compare quotes / `recommended` → execute with chosen `preferredType`.
 3. **Fusion/cross-chain submit:** after signing typed data, call again with `signedOrder` + `orderHash`.
 
-## Guides (MCP resources)
+## Flow guides (bundled references)
 
-| Flow        | Resource URI                              |
-| ----------- | ----------------------------------------- |
-| Overview    | `file://1inch-mcp/guides/swap-workflow`   |
-| Quote       | `file://1inch-mcp/guides/swap/quote`      |
-| Classic     | `file://1inch-mcp/guides/swap/classic`    |
-| Fusion      | `file://1inch-mcp/guides/swap/fusion`     |
-| Cross-chain | `file://1inch-mcp/guides/swap/crosschain` |
+Load the reference for your flow before signing or broadcasting:
+
+| Flow        | Reference                                            | MCP resource fallback                     |
+| ----------- | ---------------------------------------------------- | ----------------------------------------- |
+| Quote       | [references/QUOTE.md](references/QUOTE.md)           | `file://1inch-mcp/guides/swap/quote`      |
+| Classic     | [references/CLASSIC.md](references/CLASSIC.md)       | `file://1inch-mcp/guides/swap/classic`    |
+| Fusion      | [references/FUSION.md](references/FUSION.md)         | `file://1inch-mcp/guides/swap/fusion`     |
+| Cross-chain | [references/CROSSCHAIN.md](references/CROSSCHAIN.md) | `file://1inch-mcp/guides/swap/crosschain` |
+
+The references are the primary source (they work in every client). The MCP resource URIs serve the same content live for clients that read resources.
 
 With WalletConnect active, optional `execute: true` can send/sign in one step.
 

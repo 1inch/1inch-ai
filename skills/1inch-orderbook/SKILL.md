@@ -22,7 +22,7 @@ Use the authenticated MCP tool **`orderbook`**. Required field: `action` — `bu
 
 If build returns an `approval` block, broadcast `approveTx` first (native gas), then sign.
 
-Full playbook: MCP resource `file://1inch-mcp/guides/orderbook-workflow`.
+Full playbook (parameters, approval & gas, list modes, chain IDs): [references/WORKFLOW.md](references/WORKFLOW.md). Same content is served live as MCP resource `file://1inch-mcp/guides/orderbook-workflow` for clients that read resources.
 
 ## Example prompts
 
