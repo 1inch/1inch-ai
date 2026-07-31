@@ -4,15 +4,21 @@ Swap, order & query 1inch APIs from your AI assistant. Search docs, get SDK exam
 
 ## Features
 
-| Tool            | Auth     | Description                                            |
-| --------------- | -------- | ------------------------------------------------------ |
-| `search`        | Public   | Search 1inch documentation and API reference           |
-| `list_examples` | Public   | List available SDK code examples                       |
-| `get_example`   | Public   | Get full source code of an SDK example                 |
-| `swap`          | Required | Token swap quotes and execution (Classic, Fusion, cross-chain) |
-| `orderbook`     | Required | Build, create, list, and cancel limit orders           |
-| `product_api`   | Required | Call any 1inch product API (portfolio, prices, gas, etc.) |
-| `debug`         | Required | Look up recent API request logs for troubleshooting    |
+| Tool            | Auth       | Description                                                    |
+| --------------- | ---------- | -------------------------------------------------------------- |
+| `search`        | Public     | Search 1inch documentation and API reference                   |
+| `list_examples` | Public     | List available SDK code examples                               |
+| `get_example`   | Public     | Get full source code of an SDK example                         |
+| `swap`          | Required   | Token swap quotes and execution (Classic, Fusion, cross-chain) |
+| `orderbook`     | Required   | Build, create, list, and cancel limit orders                   |
+| `product_api`   | Required   | Call any 1inch product API (portfolio, prices, gas, etc.)      |
+| `walletconnect` | Public\*   | Non-custodial WalletConnect pairing (when registered)          |
+| `aqua`          | Public\*   | Aqua strategy analytics (when registered)                      |
+| `debug`         | Required\* | Look up recent API request logs for troubleshooting            |
+
+\*Optional tools appear only when the deployment registers them.
+
+Agent Skills in this repo teach setup (`1inch-mcp-server`) and exact `product_api` recipes by category (`1inch-market-data`, `1inch-wallet-data`, `1inch-infrastructure`, …). Install with `npx skills add 1inch/1inch-ai`.
 
 ## Setup
 
