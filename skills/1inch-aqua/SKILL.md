@@ -19,7 +19,11 @@ Prefer the MCP tool **`aqua`** (public reads). Full playbook (action examples, p
 - `strategy_overview` / `strategy_activity` / `strategy_volume`
 - `list_opened` — open strategies feed
 
-Write actions (`build_ship`, `build_dock`, `quote`, `build_swap`) only when the server enables them; they are non-custodial (wallet signs).
+## Write actions (when enabled)
+
+`build_ship`, `build_dock`, `quote`, `build_swap` — non-custodial; the user's wallet signs everything.
+
+**Recommended: connect the user's wallet first (WalletConnect).** Pair via the `walletconnect` tool (see the `1inch-walletconnect` skill). With an active session, `build_ship` / `build_dock` / `build_swap` default to sending the transaction through the connected wallet — the user simply approves each prompt in their wallet app. Set `execute: false` to receive calldata only. `quote` is never executed (pure eth_call simulation). For anonymous (no-OAuth) writes, the WalletConnect flow also handles the one-time Terms-of-Use acceptance (`accept_terms`).
 
 ## Fallback
 

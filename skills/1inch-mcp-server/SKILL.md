@@ -47,6 +47,8 @@ Hub skill for wiring the **1inch MCP server**. Companion domain skills teach exa
 
 Full parameters: [references/TOOLS.md](references/TOOLS.md). Auth: [references/AUTH.md](references/AUTH.md).
 
+**Signing flows:** when the `walletconnect` tool is available, prefer connecting the user's wallet first — `swap`, `orderbook`, and `aqua` writes then execute through the connected wallet by default (`execute` defaults to true) and the user only approves prompts in their wallet app. See the `1inch-walletconnect` skill.
+
 ## Client setup (summary)
 
 | Client                           | Transport | Config                                                               |

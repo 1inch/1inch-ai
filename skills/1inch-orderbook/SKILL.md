@@ -12,7 +12,13 @@ compatibility: Requires 1inch MCP server with authentication.
 
 Use the authenticated MCP tool **`orderbook`**. Required field: `action` — `build` | `create` | `list` | `cancel`.
 
-## Flow
+## Recommended: connect the user's wallet first (WalletConnect)
+
+Unless the user wants to sign with their own tooling, **offer WalletConnect before building**: pair via the `walletconnect` tool (see the `1inch-walletconnect` skill), then call `orderbook` with `action: "build"`. With an active session, `execute` **defaults to true** — the tool signs the EIP-712 typed data and submits the order through the connected wallet in one step (including the one-time approve tx when needed); the user simply approves the prompts in their wallet app.
+
+Set `execute: false` to get the typed data back for signing elsewhere.
+
+## Manual flow (no wallet session)
 
 1. **build** — server returns EIP-712 `typedData`, `orderHash`, `orderData`. Amounts in smallest units; assets as address or symbol.
 2. **sign** — `eth_signTypedData_v4` with the maker wallet.
