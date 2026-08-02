@@ -18,6 +18,6 @@ Source of truth in the monorepo: `apps/mcp-service/src/mcp/resources/product-api
 
 ## Charts
 
-- **Path prefix:** `/charts/...`
-- **Example:** `product_api({ method: "GET", path: "/charts/v1.0/chart/aggregated/candle/0xToken/1", query: { range: "1d" } })`
-- **Gotcha:** Prefer `search` for exact Charts paths and candle params; check live api-index / llms.txt
+- **Path prefix:** `/charts/v1.0/chart/line/{token0}/{token1}/{period}/{chainId}`
+- **Example:** `product_api({ method: "GET", path: "/charts/v1.0/chart/line/0xToken0/0xToken1/24H/1" })`
+- **Gotcha:** Period is a path segment (24H, 1W, 1M, 1Y, AllTime) — not a query param
