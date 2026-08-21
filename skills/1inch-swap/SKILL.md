@@ -10,7 +10,7 @@ compatibility: Requires 1inch MCP server (see 1inch-mcp-server skill) with auth 
 
 # 1inch Swap
 
-Use the authenticated MCP tool **`swap`**. Do not hand-build calldata for normal flows.
+Use the authenticated MCP tool **`swap`**. Call **`authenticate` first** if you are not already a real user (initialize 200 is still anonymous). Do not hand-build calldata for normal flows.
 
 ## Recommended: connect the user's wallet first (WalletConnect)
 

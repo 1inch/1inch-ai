@@ -10,7 +10,7 @@ compatibility: Requires 1inch MCP server with authentication.
 
 # 1inch Orderbook (limit orders)
 
-Use the authenticated MCP tool **`orderbook`**. Required field: `action` — `build` | `create` | `list` | `cancel`.
+Use the authenticated MCP tool **`orderbook`**. Call **`authenticate` first** if you are not already a real user (initialize 200 is still anonymous). Required field: `action` — `build` | `create` | `list` | `cancel`.
 
 ## Recommended: connect the user's wallet first (WalletConnect)
 

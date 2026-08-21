@@ -17,9 +17,17 @@ How you set this depends on the client:
 
 ## OAuth
 
-If the user calls an authenticated tool without a key, MCP clients that support OAuth can start a browser login against the 1inch Business Portal. After login, tools work for that session.
+Initialize HTTP 200 is **not** login — that is the mcp-free / anonymous identity. Public tools work without a real org.
 
-Protected tools (including the optional `debug` log lookup) need a **non-anonymous** session: a **Bearer API key** and/or **OAuth** as supported by the gateway, plus (for `debug`) organization context for log scoping. The `debug` tool is only available when the server registers it; see [TOOLS.md](TOOLS.md).
+**Before** paid tools (`swap`, `orderbook`, `product_api`, `debug`), call **`authenticate`**:
+
+1. Call `authenticate`.
+2. If the host returns **HTTP 401**, complete OAuth (`mcp_auth` / connect this MCP server).
+3. Call `authenticate` again until the result is `{ authenticated: true, organizationId, ... }`.
+
+Do **not** treat a PaymentRequired / x402 tool result as login. Do **not** skip `authenticate` because initialize succeeded.
+
+If the user has an API key, pass `Authorization: Bearer <key>` instead (see above). Protected tools (including optional `debug`) need a **non-anonymous** session. `debug` is only available when the server registers it; see [TOOLS.md](TOOLS.md).
 
 ## Stdio bridging (Claude Desktop and similar)
 
