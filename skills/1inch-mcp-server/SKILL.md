@@ -53,7 +53,7 @@ Full parameters: [references/TOOLS.md](references/TOOLS.md). Auth: [references/A
 
 | Client                           | Transport | Config                                                               |
 | -------------------------------- | --------- | -------------------------------------------------------------------- |
-| Cursor                           | HTTP      | `.cursor/mcp.json` → `"url": "https://api.1inch.com/mcp/protocol"`   |
+| Cursor                           | HTTP      | Marketplace plugin **Setup → Edit Values**, or `.cursor/mcp.json`    |
 | VS Code Copilot                  | HTTP      | `.vscode/mcp.json` → `type: "http"`, same URL                        |
 | Claude Code / Codex / Gemini CLI | HTTP      | CLI `mcp add` with `--transport http`                                |
 | Claude Desktop                   | stdio     | `npx -y supergateway --streamableHttp <URL> --outputTransport stdio` |

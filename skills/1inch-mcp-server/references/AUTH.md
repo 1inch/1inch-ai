@@ -10,6 +10,7 @@ Pass it as:
 
 How you set this depends on the client:
 
+- **Cursor plugin (Marketplace / local):** plugin → **Setup → Edit Values** → `ONEINCH_API_KEY` (optional; leave empty for public tools + OAuth)
 - **Cursor** (`.cursor/mcp.json`): `headers.Authorization`
 - **VS Code** (`.vscode/mcp.json`): `headers.Authorization`
 - **Claude Code**: `claude mcp add --header "Authorization: Bearer ..."`
