@@ -16,7 +16,9 @@ It provides tools for documentation search, SDK examples, token swaps, limit ord
 
 ### Cursor
 
-Create `.cursor/mcp.json` in your project:
+Install **1inch MCP** from the Cursor Marketplace. Skills load from this repo automatically. For authenticated tools without OAuth, open the plugin → **Setup → Edit Values** and paste an API key from the [1inch Business Portal](https://business.1inch.com/portal). Leave the field empty to use public tools and OAuth.
+
+Or create `.cursor/mcp.json` in your project:
 
 ```json
 {
@@ -80,7 +82,7 @@ See the [Agent Skills specification](https://agentskills.io/specification).
 ## Repository structure
 
 ```
-.cursor-plugin/          Cursor Marketplace plugin manifest
+.cursor-plugin/          Cursor Marketplace plugin (manifest, API-key setup values, MCP config)
 .claude-plugin/          Claude Code plugin manifest
 skills/                  Agent Skills (agentskills.io)
   1inch-mcp-server/      Hub skill (SKILL.md + AUTH/TOOLS references)

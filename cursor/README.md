@@ -18,13 +18,15 @@ Swap, order & query 1inch APIs from your AI assistant. Search docs, get SDK exam
 
 \*Optional tools appear only when the deployment registers them.
 
-Agent Skills in this repo teach setup (`1inch-mcp-server`) and exact `product_api` recipes by category (`1inch-market-data`, `1inch-wallet-data`, `1inch-infrastructure`, …). Install with `npx skills add 1inch/1inch-ai`.
+This plugin ships Agent Skills that Cursor loads automatically (`1inch-mcp-server`, `1inch-swap`, `1inch-orderbook`, `1inch-wallet-data`, `1inch-market-data`, `1inch-infrastructure`, `1inch-walletconnect`, `1inch-aqua`, `1inch-debug`). They teach setup and exact `product_api` recipes by category. You can also install them with `npx skills add 1inch/1inch-ai`.
 
 ## Setup
 
 ### From Cursor Marketplace
 
-Search for **1inch Business MCP** in the Cursor Marketplace and click Install.
+Search for **1inch MCP** in the Cursor Marketplace and click Install. Skills appear in **Customize**.
+
+**API key (optional):** open the plugin, then **Setup → Edit Values**, and paste your 1inch API key. Get a key from the [1inch Business Portal](https://business.1inch.com/portal). Leave it empty to use public tools immediately; Cursor starts OAuth when you call an authenticated tool (`swap`, `orderbook`, `product_api`, `debug`).
 
 ### Manual setup
 
