@@ -10,7 +10,7 @@ compatibility: Requires 1inch MCP server with authentication for product_api.
 
 # Market Data (product_api)
 
-Call the authenticated tool **`product_api`** with the recipes in [references/RECIPES.md](references/RECIPES.md).
+Call the authenticated tool **`product_api`** with the recipes in [references/RECIPES.md](references/RECIPES.md). Call **`authenticate` first** if you are not already a real user (initialize 200 is still anonymous).
 
 ## Prefer these intents
 

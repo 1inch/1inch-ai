@@ -10,7 +10,7 @@ compatibility: Requires 1inch MCP server with debug tool registered and authenti
 
 # Request log lookup (`debug`)
 
-Authenticated MCP tool **`debug`**. Only appears in `tools/list` when the deployment registers it.
+Authenticated MCP tool **`debug`**. Call **`authenticate` first** if you are not already a real user (initialize 200 is still anonymous). Only appears in `tools/list` when the deployment registers it.
 
 ## Modes
 

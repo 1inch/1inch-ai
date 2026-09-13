@@ -30,7 +30,11 @@ No parameters. Returns available SDK example identifiers.
 
 ## Authenticated tools
 
-Require API key or OAuth session. See [AUTH.md](AUTH.md).
+Require API key or OAuth session. See [AUTH.md](AUTH.md). Call **`authenticate` first** if you are not already a real user (initialize 200 is still anonymous).
+
+### `authenticate`
+
+No parameters. Call this to start or confirm 1inch Business login. HTTP 401 means you are still anonymous. After OAuth, call again until `{ authenticated: true, organizationId, ... }`. Then use the paid tools below.
 
 ### `swap`
 
