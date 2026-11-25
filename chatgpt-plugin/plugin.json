@@ -1,0 +1,34 @@
+{
+  "name": "1inch-read-only",
+  "version": "0.1.0",
+  "description": "Search 1inch developer documentation and read 1inch Aqua analytics from ChatGPT. Documentation search, SDK examples, maker stats, strategies, activity and volume. No swaps, no limit orders, no position writes and no account required.",
+  "author": {
+    "name": "1inch (Degensoft Ltd.)",
+    "url": "https://business.1inch.com"
+  },
+  "homepage": "https://business.1inch.com/portal/documentation/ai-integration",
+  "license": "MIT",
+  "keywords": ["1inch", "defi", "aqua", "analytics", "documentation", "mcp", "web3"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "1inch Analytics",
+        "shortDescription": "1inch docs and Aqua liquidity analytics",
+        "longDescription": "Answer questions about 1inch APIs and SDKs, and read 1inch Aqua shared-liquidity analytics: maker TVL, fees, APY, strategies, activity and volume. Read-only by design — it cannot prepare or send a transaction, and it needs no 1inch account.",
+        "developerName": "1inch (Degensoft Ltd.)",
+        "category": "Finance",
+        "capabilities": ["Read"],
+        "websiteURL": "https://business.1inch.com",
+        "privacyPolicyURL": "https://www.1inch.com/privacy-policy/",
+        "termsOfServiceURL": "https://www.1inch.com/terms-of-service/",
+        "defaultPrompt": [
+          "What are the top Aqua strategies on Base right now?",
+          "Show me the maker stats for this Aqua maker.",
+          "How do I call the 1inch spot price API?"
+        ],
+        "brandColor": "#10A37F",
+        "logo": "./assets/logo.svg"
+      }
+    }
+  }
+}
