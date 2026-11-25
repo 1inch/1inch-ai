@@ -1,56 +1,45 @@
-# 1inch Analytics — read-only ChatGPT plugin
+# 1inch Analytics — ChatGPT plugin
 
-A ChatGPT plugin over the **read-only** 1inch MCP endpoint. It answers questions about 1inch APIs and
-reads 1inch Aqua shared-liquidity analytics. It cannot prepare or send a transaction.
+A ChatGPT plugin for learning about 1inch and reading Aqua analytics. It answers questions about
+1inch APIs and shows maker stats, strategies and activity. It is read-only by design: it cannot
+prepare or send a transaction.
 
 | | |
 | --- | --- |
-| Endpoint | `https://api.1inch.com/mcp/read-only` |
-| Authentication | none — every tool on this endpoint is public |
-| Tools | `search`, `list_examples`, `get_example`, `aqua` |
+| Best for | Questions about 1inch APIs, and Aqua analytics |
+| Not for | Swaps, limit orders, or opening and closing positions |
+| Account | None required |
 
-## Why a separate plugin
+## What it can answer
 
-The route registers four tools and nothing else. `swap`, `orderbook`, `product_api`, `walletconnect`,
-`authenticate`, `debug` and the Aqua write actions do not exist on it, so no host-side toggle can
-expose them. That restriction lives on the server (`apps/mcp-service` in
-[dev-portal](https://github.com/1inch/dev-portal)), not in this package — `mcp.json` cannot filter
-tools, which is exactly why the endpoint does.
+- How a particular 1inch API or SDK works.
+- SDK example code for the common flows.
+- Aqua maker stats: TVL, fees, APY.
+- Which Aqua strategies are open, and how they are performing.
 
-Keeping this separate from the main `1inch-mcp` plugin matters for the skills as much as the tools:
-the main plugin's skills teach `swap`, `orderbook` and `product_api` recipes, and bundling those with
-this endpoint would instruct the assistant to call tools that are not there.
+If you ask for a swap, a limit order or a position change, it says that this plugin cannot do that
+and points you to the full 1inch MCP server instead. That is deliberate, not a limitation to work
+around.
+
+## Installing
+
+This plugin is distributed as a package in this repository. To install it in ChatGPT:
+
+1. Create the ZIP from this directory: `cd chatgpt-plugin && zip -r ../1inch-analytics.zip .`
+2. In ChatGPT, open **Plugins**, choose **Upload new or existing plugin**, and select the ZIP.
+
+For a personal or workspace custom connector, add the read-only 1inch MCP server URL and leave
+authentication off.
 
 ## Layout
 
 ```
 chatgpt-plugin/
-  plugin.json                          manifest, OpenAI metadata under extensions.com.openai
-  mcp.json                             the read-only server connection
+  plugin.json      plugin manifest and listing metadata
+  mcp.json         the read-only MCP server connection
   assets/logo.svg
-  skills/
-    1inch-mcp-server/SKILL.md          hub: endpoint, the four tools, what is not available
-    1inch-mcp-server/references/TOOLS.md
-    1inch-aqua/SKILL.md                Aqua analytics, read actions only
-    1inch-aqua/references/WORKFLOW.md  exact argument shapes and how to read the results
+  skills/          instructions the assistant follows for docs and Aqua questions
 ```
 
-## Installing (workspace / custom connector)
-
-The package is not published to the plugin directory. Connect it directly:
-
-1. OpenAI requires a ZIP for a plug-in upload. From the repository root:
-   `cd chatgpt-plugin && zip -r ../1inch-read-only.zip .`
-2. In ChatGPT, open **Plugins**, then **Upload new or existing plugin**, and select the ZIP.
-3. Complete domain verification for `api.1inch.com` if prompted.
-
-For a personal or workspace custom connector, add `https://api.1inch.com/mcp/read-only` as the server
-URL with authentication set to none.
-
-## Updating the tool surface
-
-`mcp.json` declares the server; it cannot add or remove tools. Adding a tool here means changing the
-endpoint, which is a `dev-portal` change. Adding a *skill* is a change to this directory only.
-
-After any change, refresh the app in ChatGPT so it re-reads the tool list and instructions — a
-conversation already open keeps the list it started with.
+Skills live in `skills/`. They are self-contained rather than shared with the other plugins in this
+repository, because those cover workflows this plugin cannot perform.

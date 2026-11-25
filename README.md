@@ -55,15 +55,12 @@ Create `.vscode/mcp.json` in your project:
 
 See the [full setup guide](https://business.1inch.com/portal/documentation/ai-integration/supported-clients) for Claude Desktop, Windsurf, JetBrains, OpenAI Codex, Gemini CLI, ChatGPT, Grok, and more.
 
-### ChatGPT (read-only)
+### ChatGPT
 
-`chatgpt-plugin/` is a separate plugin over the **read-only** endpoint,
-`https://api.1inch.com/mcp/read-only`. It searches documentation and reads Aqua analytics; it cannot
-swap, place limit orders, open or close positions, or call other 1inch APIs. No account is needed.
-
-The restriction is enforced by that endpoint in the MCP server, not by this package: it registers
-only `search`, `list_examples`, `get_example` and a read-only `aqua`. See
-[chatgpt-plugin/README.md](chatgpt-plugin/README.md) for the layout and how to package it.
+`chatgpt-plugin/` packages a read-only ChatGPT plugin. It answers questions about 1inch APIs and
+reads Aqua analytics. It cannot swap, place limit orders, open or close positions, or call other
+1inch APIs, so it is the one to install when the assistant should answer questions rather than
+prepare a transaction. No account is needed.
 
 ## Agent Skills
 
