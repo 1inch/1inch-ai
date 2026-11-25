@@ -19,15 +19,17 @@
         "developerName": "1inch (Degensoft Ltd.)",
         "category": "Finance",
         "capabilities": ["Read"],
-        "websiteURL": "https://business.1inch.com",
-        "privacyPolicyURL": "https://www.1inch.com/privacy-policy/",
-        "termsOfServiceURL": "https://www.1inch.com/terms-of-service/",
+        "websiteURL": "https://business.1inch.com/portal/documentation/ai-integration",
+        "supportURL": "https://business.1inch.com/portal/support",
+        "privacyPolicyURL": "https://business.1inch.com/portal/privacy-policy",
+        "termsOfServiceURL": "https://business.1inch.com/portal/terms-of-service",
         "defaultPrompt": [
           "What are the top Aqua strategies on Base right now?",
           "Show me the maker stats for this Aqua maker.",
           "How do I call the 1inch spot price API?"
         ],
         "brandColor": "#10A37F",
+        "composerIcon": "./assets/icon.png",
         "logo": "./assets/logo.svg"
       }
     }
