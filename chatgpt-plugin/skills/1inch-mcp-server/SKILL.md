@@ -1,10 +1,10 @@
 ---
 name: 1inch-mcp-server
 description: >-
-  Connect to the 1inch MCP server for developer documentation search, SDK examples
-  and 1inch Aqua shared-liquidity analytics. Use when the user asks about 1inch API endpoints,
-  SDK usage, or Aqua maker stats, strategies, activity and volume. This endpoint cannot swap,
-  place limit orders or open and close positions.
+  Learn how a 1inch API or SDK works across Arc, Arbitrum, Avalanche, Base, BNB Chain, Cronos,
+  Ethereum, Gnosis, HyperEVM, Linea, Monad, Optimism, Polygon, Sonic, Unichain, zkSync Era and
+  Solana, and read 1inch Aqua maker stats, strategies and activity. Use when the user asks about
+  1inch API endpoints, SDK usage, supported chains, or Aqua analytics.
 license: MIT
 compatibility: Requires an MCP-capable client with HTTP transport.
 metadata:
