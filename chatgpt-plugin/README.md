@@ -42,7 +42,9 @@ chatgpt-plugin/
   plugin.json              plugin manifest and listing metadata
   mcp.json                 the read-only MCP server connection
   validate-manifests.py    checks both files against their published schemas
-  assets/logo.svg
+  assets/
+    icon.png               square 256x256 composer icon
+    logo.svg               listing logo
   skills/                  instructions the assistant follows for docs and Aqua questions
 ```
 
