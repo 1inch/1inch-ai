@@ -1,9 +1,9 @@
 ---
 name: 1inch-aqua
 description: >-
-  Read 1inch Aqua shared-liquidity analytics (maker TVL, fees, APY, strategies, activity,
-  volume) via the MCP `aqua` tool. Use when the user asks about Aqua maker performance or open
-  strategies. Read-only: this endpoint cannot open or close a position.
+  Read 1inch Aqua shared-liquidity analytics: maker TVL, fees, APY, strategies, activity and
+  volume. Use when the user asks about Aqua maker performance or open strategies. Analytics only:
+  this plugin cannot open or close a position.
 license: MIT
 compatibility: Requires the 1inch MCP server, which registers `aqua` for every caller with no authentication.
 ---

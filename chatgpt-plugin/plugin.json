@@ -1,7 +1,8 @@
 {
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "1inch",
   "version": "0.1.0",
-  "description": "Search 1inch developer documentation and read 1inch Aqua analytics from ChatGPT. Documentation search, SDK examples, maker stats, strategies, activity and volume. No swaps, no limit orders, no position writes and no account required.",
+  "description": "Learn how a 1inch API or SDK works across Arc, Arbitrum, Avalanche, Base, BNB Chain, Cronos, Ethereum, Gnosis, HyperEVM, Linea, Monad, Optimism, Polygon, Sonic, Unichain and zkSync Era, and on Solana. Read 1inch Aqua maker stats, strategies and activity. This plugin does not swap, place a limit order or change an Aqua position.",
   "author": {
     "name": "1inch (Degensoft Ltd.)",
     "url": "https://business.1inch.com"
