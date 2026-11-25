@@ -25,8 +25,12 @@ around.
 
 This plugin is distributed as a package in this repository. To install it in ChatGPT:
 
-1. Create the ZIP from this directory: `cd chatgpt-plugin && zip -r ../1inch-plugin.zip .`
-2. In ChatGPT, open **Plugins**, choose **Upload new or existing plugin**, and select the ZIP.
+1. Validate the manifests: `python3 validate-manifests.py` (needs `jsonschema`).
+2. Create the ZIP: `cd chatgpt-plugin && zip -r ../1inch-plugin.zip .`
+3. In ChatGPT, open **Plugins**, choose **Upload new or existing plugin**, and select the ZIP.
+
+`plugin.json` must sit at the ZIP root, so run `zip` from inside this directory rather than from the
+repository root.
 
 For a personal or workspace custom connector, add the read-only 1inch MCP server URL and leave
 authentication off.
@@ -35,10 +39,11 @@ authentication off.
 
 ```
 chatgpt-plugin/
-  plugin.json      plugin manifest and listing metadata
-  mcp.json         the read-only MCP server connection
+  plugin.json              plugin manifest and listing metadata
+  mcp.json                 the read-only MCP server connection
+  validate-manifests.py    checks both files against their published schemas
   assets/logo.svg
-  skills/          instructions the assistant follows for docs and Aqua questions
+  skills/                  instructions the assistant follows for docs and Aqua questions
 ```
 
 Skills live in `skills/`. They are self-contained rather than shared with the other plugins in this
