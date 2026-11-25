@@ -1,7 +1,7 @@
 ---
 name: 1inch-mcp-server
 description: >-
-  Connect to the 1inch read-only MCP server for developer documentation search, SDK examples
+  Connect to the 1inch MCP server for developer documentation search, SDK examples
   and 1inch Aqua shared-liquidity analytics. Use when the user asks about 1inch API endpoints,
   SDK usage, or Aqua maker stats, strategies, activity and volume. This endpoint cannot swap,
   place limit orders or open and close positions.
@@ -12,10 +12,11 @@ metadata:
   documentation: https://business.1inch.com/portal/documentation/ai-integration
 ---
 
-# 1inch MCP Server (read-only)
+# 1inch MCP Server
 
-Hub skill for the **read-only** 1inch MCP endpoint. The companion `1inch-aqua` skill teaches the
-analytics workflows.
+Hub skill for the 1inch MCP endpoint. The companion `1inch-aqua` skill teaches the analytics
+workflows. This endpoint is read-only: it serves documentation and Aqua analytics, and cannot prepare
+or send a transaction.
 
 ## Server URL (production)
 
