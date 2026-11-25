@@ -12,9 +12,9 @@
   "extensions": {
     "com.openai": {
       "interface": {
-        "displayName": "1inch",
+        "displayName": "Multi-Chain DeFi Infrastructure",
         "shortDescription": "1inch docs and Aqua liquidity analytics",
-        "longDescription": "Answer questions about 1inch APIs and SDKs, and read 1inch Aqua shared-liquidity analytics: maker TVL, fees, APY, strategies, activity and volume. Read-only by design — it cannot prepare or send a transaction, and it needs no 1inch account.",
+        "longDescription": "Learn how a 1inch API or SDK works across Arc, Arbitrum, Avalanche, Base, BNB Chain, Cronos, Ethereum, Gnosis, HyperEVM, Linea, Monad, Optimism, Polygon, Sonic, Unichain and zkSync Era, and on Solana. Read 1inch Aqua maker stats, strategies and activity. This plugin does not swap, place a limit order or change an Aqua position.",
         "developerName": "1inch (Degensoft Ltd.)",
         "category": "Finance",
         "capabilities": ["Read"],
