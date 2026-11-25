@@ -57,10 +57,10 @@ See the [full setup guide](https://business.1inch.com/portal/documentation/ai-in
 
 ### ChatGPT
 
-`chatgpt-plugin/` packages a read-only ChatGPT plugin. It answers questions about 1inch APIs and
-reads Aqua analytics. It cannot swap, place limit orders, open or close positions, or call other
-1inch APIs, so it is the one to install when the assistant should answer questions rather than
-prepare a transaction. No account is needed.
+`chatgpt-plugin/` packages the ChatGPT plugin. It answers questions about 1inch APIs and reads Aqua
+analytics. It cannot swap, place limit orders, open or close positions, or call other 1inch APIs, so
+it is the one to install when the assistant should answer questions rather than prepare a
+transaction. No account is needed.
 
 ## Agent Skills
 

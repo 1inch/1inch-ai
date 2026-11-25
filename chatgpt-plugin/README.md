@@ -1,4 +1,4 @@
-# 1inch Analytics — ChatGPT plugin
+# 1inch — ChatGPT plugin
 
 A ChatGPT plugin for learning about 1inch and reading Aqua analytics. It answers questions about
 1inch APIs and shows maker stats, strategies and activity. It is read-only by design: it cannot
@@ -25,7 +25,7 @@ around.
 
 This plugin is distributed as a package in this repository. To install it in ChatGPT:
 
-1. Create the ZIP from this directory: `cd chatgpt-plugin && zip -r ../1inch-analytics.zip .`
+1. Create the ZIP from this directory: `cd chatgpt-plugin && zip -r ../1inch-plugin.zip .`
 2. In ChatGPT, open **Plugins**, choose **Upload new or existing plugin**, and select the ZIP.
 
 For a personal or workspace custom connector, add the read-only 1inch MCP server URL and leave

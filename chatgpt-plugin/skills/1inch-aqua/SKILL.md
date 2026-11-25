@@ -5,7 +5,7 @@ description: >-
   volume) via the MCP `aqua` tool. Use when the user asks about Aqua maker performance or open
   strategies. Read-only: this endpoint cannot open or close a position.
 license: MIT
-compatibility: Requires the 1inch read-only MCP server, which registers `aqua` for every caller with no authentication.
+compatibility: Requires the 1inch MCP server, which registers `aqua` for every caller with no authentication.
 ---
 
 # Aqua strategy analytics

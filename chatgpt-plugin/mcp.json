@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
   "mcpServers": {
-    "1inch-read-only": {
+    "1inch": {
       "type": "streamable-http",
       "url": "https://api.1inch.com/mcp/read-only",
       "extensions": {
