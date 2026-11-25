@@ -81,7 +81,7 @@ Org-scoped production debugging: look up application request logs. Requires the 
 
 ### `aqua`
 
-**Optional** — registered when Unleash flag `mcp-service.tool.aqua` is on. Aqua strategy analytics (and optional write builders). Prefer this over raw `product_api` for Aqua. See skill `1inch-aqua`.
+Aqua strategy analytics (read actions) plus the write actions `create_position`, `close_position`, `quote` and `build_swap`. Prefer this over raw `product_api` for Aqua. See skill `1inch-aqua`.
 
 ## Machine-readable API index
 
