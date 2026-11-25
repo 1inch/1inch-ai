@@ -5,7 +5,6 @@ description: >-
   activity, volume) via the MCP `aqua` tool. Use for Aqua strategy questions;
   prefer aqua over raw product_api.
 license: MIT
-compatibility: Requires 1inch MCP server with the aqua tool registered.
 ---
 
 # Aqua strategy analytics
